@@ -47,4 +47,7 @@ Caso necessite executar apenas uma feature digite:
 ```
 cucumber feature/nome da feature desejada.feature
 ```
+## Referências:
 
+Link para maiores informações sobre o json-matcher:
+https://github.com/thoughtbot/json_matchers
