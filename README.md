@@ -16,7 +16,7 @@ https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git
 
 Após a instalação do git digite:
 ```
-git clone https://github.com/andreluaz/httparty.git
+git clone https://github.com/andreluaz/httparty-contrato.git
 ```
 ## Iniciando o json-server
 
