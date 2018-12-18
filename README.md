@@ -1,5 +1,5 @@
 # httparty com cucumber e contrato
-Consumir uma API Json-Server usando GET com httparty e validando a requisição "contrato" com um esquema.
+Consumir uma API Json-Server usando GET com httparty e cucumber, sendo validando a requisição com um esquema de contrato.
 
 ## Pré-requisito
 
