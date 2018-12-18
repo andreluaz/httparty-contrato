@@ -1,0 +1,14 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Danilo2010",
+      "location": "Fifa2019"
+    },
+    {
+      "nome": "roy",
+      "location": "india",
+      "id": 2
+    }
+  ]
+}

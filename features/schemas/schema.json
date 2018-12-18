@@ -1,0 +1,16 @@
+{
+    "description": "esquema do GET",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "number",
+            "minimum": 0
+        },
+        "nome": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        }
+    }
+}
