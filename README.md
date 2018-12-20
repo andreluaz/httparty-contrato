@@ -1,53 +1,80 @@
-# httparty com cucumber e contrato
-Consumir uma API Json-Server usando GET com httparty e cucumber, sendo validando a requisição com um esquema de contrato.
+# httparty e cucumber e testes de contrato com json_matchers
+Consumir uma API Json-Server usando httparty e cucumber, validando o contrato da requisição com json_matchers.
 
 ## Pré-requisito
 
-É necessário a instalação do Json-Server, sua instalação poderá ser seguida neste link abaixo:
-https://github.com/danilopolicarpos/Httparty
+É necessário a instalação do Json-Server, para instalar digite em seu terminal:
+
+```
+npm install -g json-server
+```
 
 Também é necessário a instalação do Bundle:
-https://bundler.io/
+
+```
+gem install bundler
+```
 
 ## Clonando o repositório
 
-Para fazer uma cópia "clone" do repositório é necessário a instalação do git para isto basta seguir os passos deste link:
-https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git
+Clone o Repositório:
 
-Após a instalação do git digite:
 ```
 git clone https://github.com/andreluaz/httparty-contrato.git
 ```
-## Iniciando o json-server
 
-Após a cópia "clonagem" do repositório e a instalação do Json-Server digite:
-```
-json-server --watch info.json
-```
+## Instalação das dependências
 
-## Instalação das dependências:
+Após a clonagem do repositório digite:
 
-Após a cópia "clonagem" do repositório digite:
 ```
 bundle install
 ```
 
 Isto fará a instalação das dependências necessárias para a execução dos testes.
 
-## Uso:
+## Iniciando o json-server
 
-Para usar, não esquecer de iniciar o json-server e então para executar todas as features digite:
+Iniciar o Json-Server:
+
+```
+json-server --watch info.json
+```
+
+Não esquecer de iniciar o json-server para executar as features.
+
+## Execução dos Testes
+
+Para executar os testes abra uma nova aba no terminal e digite:
 
 ```
 cucumber
 ```
 
-Caso necessite executar apenas uma feature digite:
+Caso necessário executar apenas uma feature digite:
 
 ```
 cucumber feature/nome da feature desejada.feature
 ```
-## Referências:
+## Arquitetura do Projeto
 
-Link para maiores informações sobre o json-matcher:
-https://github.com/thoughtbot/json_matchers
+```
+├── features
+│   ├── schemas              - Schemas usados para os testes de contrato
+│   │   └── schema.json
+│   ├── step_definitions     - Snippets para implementar os testes
+│   │   └── get.rb
+│   └── support              - Requisição das gens e configuração da pasta Schema
+│   │   └── env.rb
+│   ├── get.feature          - Feature escrita para os testes
+│
+│── .gitignore
+├── Gemfile                  - Dependencias usada no projeto
+├── Gemfile.lock             - Versões das gens instaladas
+├── README.md   
+└── info.json                - Arquivo usado pelo Json-server
+```
+
+## Referências
+
+Link para maiores informações sobre o json-matcher: https://github.com/thoughtbot/json_matchers
